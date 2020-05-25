@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+
+.navbar {
+  font-family: "Lora";
+  background-color: rgba(45, 45, 45, 0.8);
+  z-index: 999;
+  display: grid;
+  grid-template-columns: 1fr [logo] auto [navbar] minmax(481px, 3fr) 1fr;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  .logo {
+    color: #ffffff;
+    grid-area: logo;
+    text-decoration: none;
+  }
+  .mobile {
+    display: none;
+    grid-area: navbar;
+    flex-flow: row;
+    justify-content: center;
+  }
+  .desktop {
+    grid-area: navbar;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; //main axis
+    align-items: center; //cross axis
+  }
+}
+
+
+@media (max-width: $_breakpoint) {
+  .navbar {
+    grid-template-columns: [navbar] auto;
+    height: 8%;
+    background-color: rgba(45, 45, 45, 1);
+    box-shadow: 0.5rem -0.5rem 1rem rgba(0,0,0,0.07);
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    .mobile {
+      display: flex;
+    }
+    .desktop {
+      display: none;
+    }
+    .logo {
+      display: none;
+    }
+  }
+}
+

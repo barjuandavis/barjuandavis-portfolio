@@ -1,0 +1,26 @@
+$_breakpoint: 600px;
+$_navbar-width: 18vw;
+$_navbar-padding: 0em;
+
+$_grid__bp-sm: 576;
+$_grid__bp-md: 768;
+$_grid__bp-lg: 992;
+$_grid__bp-xl: 1200;
+$_map-grid-props: (
+        '-xl': $_grid__bp-xl,
+        '-lg': $_grid__bp-lg,
+        '-md': $_grid__bp-md,
+        '-sm': $_grid__bp-sm
+);
+
+
+
+@mixin _create-mq($breakpoint) {
+    @if($breakpoint == 0) {
+      @content;
+    } @else {
+      @media (max-width: $breakpoint *1px) {
+        @content;
+      }
+    }
+  }

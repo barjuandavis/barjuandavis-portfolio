@@ -1,0 +1,33 @@
+<svg width="120" height="119" viewBox="0 0 120 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon">
+<g clip-path="url(#clip0)">
+<g id="kotlin-1 1">
+<g clip-path="url(#clip1)">
+<path id="Vector" d="M60.2694 -1L-0.983337 62.359V119L60.1816 58.7322L121.017 -1H60.2694Z" fill="url(#paint0_linear)"/>
+<path id="&#60;Path&#62;" d="M-0.983337 118.997L60.1816 58.7296L121.017 118.997H-0.983337Z" fill="url(#paint1_linear)"/>
+<path id="Vector_2" d="M-0.983337 -1H60.2694L-0.983337 62.359V-1Z" fill="url(#paint2_linear)"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="148.975" y1="-22" x2="2.79717" y2="114.908" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0"/>
+<stop offset="1"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="93.0583" y1="89" x2="-94.7192" y2="262.089" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="56.9667" y1="-1" x2="-23.9346" y2="86.8344" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0">
+<rect width="120" height="119" fill="white"/>
+</clipPath>
+<clipPath id="clip1">
+<rect x="-2" width="122" height="120" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+
+$nav-size: calc($_navbar-width+($_navbar-padding*2));
+$main-title: #CCCe5e;
+$content-text: #ffffff;
+
+.contents {
+    font-size: 16px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    text-align: right;
+    width: 100vw;
+    height: 100vh;
+    padding: 10%;
+    margin: 0;
+    margin-top: 3em;
+}
+
+@media screen and (max-width: $_breakpoint) {
+    .contents {
+        text-align: center;
+        width: 100%
+    }
+}
+
+
+
+

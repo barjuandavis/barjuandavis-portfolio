@@ -1,0 +1,32 @@
+@import "../styles/variables";
+
+* {
+    //border: 1px solid red !important; //biar keliatan semua hehe
+    font-family: "Jost", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+$current-font-size: 16px;
+@each $mod, $bp in $_map-grid-props {
+    @include _create-mq($bp) {
+        @if ($mod != 'xl') {
+            $current-font-size: $current-font-size * (92 / 100);
+        }
+        html {
+            font-size: $current-font-size;
+        } 
+    }
+}
