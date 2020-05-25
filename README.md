@@ -1,5 +1,4 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
+<!-- <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
@@ -96,4 +95,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+-->
