@@ -1,4 +1,10 @@
 module.exports = {
+  siteMetadata: {
+    siteMetadata: {
+      title: `Barjuan Davis P. - Full Stack Developer`,
+      description: `I'm a creative thinker and executor. I make dreams come true by developing purposeful applications.`,
+      author: `@barjuandavis`,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -17,6 +23,7 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sass',

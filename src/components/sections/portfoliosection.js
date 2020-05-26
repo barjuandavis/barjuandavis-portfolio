@@ -93,8 +93,8 @@ export default () => (
             data-sal-duration={duration.toString()}>Here are some of <span>my works.</span></Title>
         <SubContainer>
         <WorkContainer>
-            <StyledImage imageName="placeholder" />
-            <WorkTitle>Work Title 1</WorkTitle>
+            <StyledImage imageName="portfolio" />
+            <WorkTitle>This site! (barjuandavis.codes)</WorkTitle>
             <WorkDescription>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                 Saepe illo fuga veniam ipsa quaerat voluptatibus aspernatur, 

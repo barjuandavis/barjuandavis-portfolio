@@ -4,8 +4,11 @@ import IntroSection from "../components/sections/introsection"
 import AboutSection from "../components/sections/aboutsection"
 import PortfolioSection from "../components/sections/portfoliosection"
 import ContactSection from "../components/sections/contactsection"
+import SEO from '../components/seo'
+
 export default () => (
     <AlternateLayout>
+       <SEO title="Barjuan Davis P. - Home" keywords={[`developer`, `application`, `full stack`]} />
        <section className="intro">
           <IntroSection />
        </section>

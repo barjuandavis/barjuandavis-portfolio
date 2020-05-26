@@ -39,6 +39,13 @@ export default function Image(props) {
           }
         }
       }
+      portfolio: file(relativePath: { eq: "portfolio.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
     }
   `)
 
@@ -50,6 +57,9 @@ export default function Image(props) {
       break
       case "ikan": 
         fluid = data.ikan.childImageSharp.fluid
+      break
+      case "portfolio":
+        fluid = data.portfolio.childImageSharp.fluid
       break
       default:
         fluid = data.placeholder.childImageSharp.fluid
