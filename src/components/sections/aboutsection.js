@@ -41,6 +41,41 @@ const Container = styled.div`
         grid-column-start: 2;
         justify-self: center;
     }
+    .skillContainer {
+        margin-top: 2rem;
+        grid-row-start: 7;
+        grid-column: 2 / span 2;
+        padding: 0 6rem;
+        display: flex;
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        justify-content: space-around;
+        justify-self: center;
+        a {
+            width: 5rem;
+            height: 5rem;
+            margin: 0.5rem;
+            svg {
+            width: 5rem;
+            height: 5rem;
+            margin: 0.5rem;
+                path:not(#kotlin) {
+                    fill: white;
+                }
+                path {
+                    fill-opacity: 0.6;
+                    transition: fill-opacity 250ms ease-out;
+                }
+            }
+        }
+        a:hover {
+            svg {
+                path {
+                    fill-opacity: 1;
+                }
+            }
+        }
+    }
 `
 
 const Title = styled.h1`
@@ -98,41 +133,7 @@ const Subcontents = styled.p`
     margin-left: 0;
     margin-right: 0;
 `
-const SkillContainer = styled.div`
-    margin-top: 2rem;
-    grid-row-start: 7;
-    grid-column: 2 / span 2;
-    padding: 0 6rem;
-    display: flex;
-    flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    justify-content: space-around;
-    justify-self: center;
-    a {
-        width: 5rem;
-        height: 5rem;
-        margin: 0.5rem;
-        svg {
-        width: 5rem;
-        height: 5rem;
-        margin: 0.5rem;
-            path:not(#kotlin) {
-                fill: white;
-            }
-            path {
-                fill-opacity: 0.6;
-                transition: fill-opacity 250ms ease-out;
-            }
-        }
-    }
-    a:hover {
-        svg {
-            path {
-                fill-opacity: 1;
-            }
-        }
-    }
-`
+const SkillContainer = styled.div``
 
 const duration = 250;
 const preDelay = 300;
@@ -163,7 +164,7 @@ export default () => (
             data-sal-delay={(preDelay + duration*2).toString()}
             data-sal-easing="ease-in"
             data-sal-duration={duration.toString()}>(p.s: it is not limited to these!)</Subcontents>
-        <SkillContainer data-sal="fade"
+        <SkillContainer className="skillContainer" data-sal="fade"
             data-sal-delay={(preDelay + duration*2).toString()}
             data-sal-easing="ease-in"
             data-sal-duration={duration.toString()}>
