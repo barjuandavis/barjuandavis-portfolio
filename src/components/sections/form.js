@@ -88,12 +88,12 @@ export default function Form(props) {
     return (
         <Container>
         <form 
-            name="Contact Forms"
+            name="Contact Form - barjuandavis"
             className="container"
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true">
-                <input type="hidden" name="bot-field"  value="Contact Form"/>
+                <input type="hidden" name="bot-field"  value="Contact Form - barjuandavis"/>
                 <Title>Contact<span style={{fontWeight: 300}}> me.</span></Title>
                 <input 
                     type="text" 
