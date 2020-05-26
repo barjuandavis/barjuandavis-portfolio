@@ -42,6 +42,17 @@ const StyledButtonWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     grid-column: 2;
+    .portfolio {
+        background: rgba(255,255,255, 0.7);
+        color: rgba(0, 0, 0, 0.9);
+        &:hover {
+            background: rgba(255,255,255, 1);
+            color: rgba(0, 0, 0, 1);
+        }
+    }
+    .about {
+        margin-left: 1rem;
+    }
 `
 
 const duration = 250;
@@ -68,7 +79,8 @@ export default (props) => (
             data-sal-delay={(preDelay + duration*2).toString()}
             data-sal-easing="ease-in"
             data-sal-duration={duration.toString()}>
-            <Button to="#portfolio">See My Works</Button>
+            <Button className="portfolio" to="#portfolio">See My Works</Button>
+            <Button className="about" to="#about">About Me</Button>
         </StyledButtonWrapper>
     </Container>
 )
