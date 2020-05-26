@@ -145,6 +145,9 @@ const SkillContainer = styled.div`
                 }
             }
         }
+        @media (max-width: 600px) {
+            padding: 0 4rem;
+        }
 `
 
 const duration = 250;

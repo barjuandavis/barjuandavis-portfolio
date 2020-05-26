@@ -8,9 +8,9 @@ export default (props) => (
     <div className="navbar">
         <Link className="logo" to="/"><StyledImage imageName="header" /></Link>
         <nav className="mobile">
-            <StyledMobileLink to="#about" iconType="person">About Me</StyledMobileLink>
-            <StyledMobileLink to="#portfolio" iconType="book">Portfolio</StyledMobileLink>
-            <StyledMobileLink to="#contact">Contact</StyledMobileLink>
+            <StyledMobileLink to="#about" iconType="person"></StyledMobileLink>
+            <StyledMobileLink to="#portfolio" iconType="book"></StyledMobileLink>
+            <StyledMobileLink to="#contact"></StyledMobileLink>
         </nav>
         <nav className="desktop">   
             <StyledAnchorLink to="#about">About Me</StyledAnchorLink>
