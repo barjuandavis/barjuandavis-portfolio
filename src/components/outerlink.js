@@ -38,6 +38,7 @@ export default function OuterLink(props){
 
     return (
         <Container 
+            className={props.className}
             href={props.href}
             rel="noopener noreferrer" 
             target="_blank">

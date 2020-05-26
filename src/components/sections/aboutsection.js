@@ -27,7 +27,7 @@ const Container = styled.div`
     background: linear-gradient(330deg, rgba(0,24,132,1) 0%, rgba(119,46,116,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001884",endColorstr="#772e74",GradientType=1); 
     grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
-    grid-template-rows: 1fr auto auto 0.2fr auto auto auto 1fr;
+    grid-template-rows: 1fr auto auto auto auto 0.2fr auto auto auto 1fr;
     gap: 0.5rem 2rem;
     justify-items: start;
     margin-top: 0;
@@ -37,13 +37,83 @@ const Container = styled.div`
     margin-left: 0;
     margin-right: 0;
     .imgcontainer {
-        grid-row: 2 / span 2;
+        grid-row: 2 / span 4;
         grid-column-start: 2;
         justify-self: center;
     }
-    .skillContainer {
-        margin-top: 2rem;
-        grid-row-start: 7;
+    .socialMediaBar {
+        grid-column: 3 / 3;
+        grid-row: 4 / 4;
+    }
+    .link {
+        grid-column: 3 / 3;
+        grid-row: 5 / 5;
+        svg {
+            fill: none;
+            stroke: white;
+        }
+    }
+
+    
+`
+
+const Title = styled.h1`
+    font-size: 2.5rem;
+    font-weight: 600;
+    grid-row-start: 2;
+    grid-column-start: 3;
+    align-self: end;
+    line-height: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+`
+const TitleMod = styled.span`
+    font-weight: normal;
+`
+const Contents = styled.p`
+    font-size: 1.2rem;
+    font-weight: normal;
+    grid-row-start: 3;
+    grid-column-start: 3;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    a {
+        svg {
+            fill: none;
+            stroke: white;
+        }
+    }
+`
+const Subtitle= styled.h1`
+    font-size: 2.5rem;
+    text-align: center;
+    justify-self: center;
+    font-weight: 300;
+    grid-row: 7 / 7;
+    grid-column: 2 / span 2;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+`
+const Subcontents = styled.p`
+    font-weight: 300;
+    text-align: center;
+    justify-self: center;
+    grid-row: 8 / 8;
+    grid-column: 2 / span 2;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+`
+const SkillContainer = styled.div`
+        grid-row-start: 9;
         grid-column: 2 / span 2;
         padding: 0 6rem;
         display: flex;
@@ -75,65 +145,7 @@ const Container = styled.div`
                 }
             }
         }
-    }
 `
-
-const Title = styled.h1`
-    font-size: 2.5rem;
-    font-weight: 600;
-    grid-row-start: 2;
-    grid-column-start: 3;
-    align-self: end;
-    line-height: 3rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-`
-const Subtitle= styled.h1`
-    font-size: 2.5rem;
-    text-align: center;
-    justify-self: center;
-    font-weight: 300;
-    grid-row-start: 5;
-    grid-column: 2 / span 2;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-
-`
-const TitleMod = styled.span`
-    font-weight: normal;
-`
-const Contents = styled.p`
-    font-size: 1.2rem;
-    font-weight: normal;
-    grid-row-start: 3;
-    grid-column-start: 3;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    a {
-        svg {
-            fill: none;
-            stroke: white;
-        }
-    }
-`
-const Subcontents = styled.p`
-    font-weight: 300;
-    text-align: center;
-    justify-self: center;
-    grid-row-start: 6;
-    grid-column: 2 / span 2;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-`
-const SkillContainer = styled.div``
 
 const duration = 250;
 const preDelay = 300;
@@ -153,9 +165,11 @@ export default () => (
             data-sal-easing="ease-in"
             data-sal-duration={duration.toString()}>I'm a creative thinker and executor. I make dreams come true by developing purposeful applications. 
             <br />Also a creative artist who makes music and graphic designs.
-            <br /><SocialMediaBar className="socialMediaBar" />
-            <OuterLink href="" type="download">Download My Resume</OuterLink>
         </Contents>
+        <SocialMediaBar 
+            className="socialMediaBar"></SocialMediaBar>
+        <OuterLink 
+            className="link" href="" type="download">Download My Resume</OuterLink>
         <Subtitle data-sal="slide-up"
             data-sal-delay={(preDelay + duration*2).toString()}
             data-sal-easing="ease-in"

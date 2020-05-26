@@ -38,7 +38,9 @@ export default function SocialMediaBar(props) {
     `
 
     return (
-        <Container className={props.className}>
+        <Container 
+            style={props.style}
+            className={props.className}>
             <a href="https://github.com/barjuandavis" 
             rel="noopener noreferrer"target="_blank"><GithubIcon /><span> Github</span></a>
             <a href="https://linkedin.com/in/barjuandavis" 
