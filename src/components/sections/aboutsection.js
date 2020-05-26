@@ -98,7 +98,6 @@ const Subcontents = styled.p`
     margin-left: 0;
     margin-right: 0;
 `
-
 const SkillContainer = styled.div`
     margin-top: 2rem;
     grid-row-start: 7;
@@ -109,7 +108,6 @@ const SkillContainer = styled.div`
     -ms-flex-wrap: wrap;
     justify-content: space-around;
     justify-self: center;
-    
     a {
         width: 5rem;
         height: 5rem;
@@ -118,7 +116,7 @@ const SkillContainer = styled.div`
         width: 5rem;
         height: 5rem;
         margin: 0.5rem;
-            path {
+            path:not(#kotlin) {
                 fill: white;
             }
             path {
@@ -127,7 +125,6 @@ const SkillContainer = styled.div`
             }
         }
     }
-
     a:hover {
         svg {
             path {
@@ -135,7 +132,6 @@ const SkillContainer = styled.div`
             }
         }
     }
-   
 `
 
 const duration = 250;
