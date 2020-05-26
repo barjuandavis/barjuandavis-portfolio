@@ -178,10 +178,7 @@ export default () => (
             data-sal-delay={(preDelay + duration*2).toString()}
             data-sal-easing="ease-in"
             data-sal-duration={duration.toString()}>(p.s: it is not limited to these!)</Subcontents>
-        <SkillContainer className="skillContainer" data-sal="fade"
-            data-sal-delay={(preDelay + duration*2).toString()}
-            data-sal-easing="ease-in"
-            data-sal-duration={duration.toString()}>
+        <SkillContainer className="skillContainer">
                 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" 
                 rel="noopener noreferrer"target="_blank"><Html5Icon /></a>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" 
