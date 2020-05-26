@@ -118,7 +118,7 @@ const SkillContainer = styled.div`
         width: 5rem;
         height: 5rem;
         margin: 0.5rem;
-            path:not(#kotlin) {
+            path {
                 fill: white;
             }
             path {
@@ -171,32 +171,32 @@ export default () => (
             data-sal-delay={(preDelay + duration*2).toString()}
             data-sal-easing="ease-in"
             data-sal-duration={duration.toString()}>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" 
-            rel="noopener noreferrer"target="_blank"><Html5Icon /></a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" 
-            rel="noopener noreferrer" target="_blank"><CssIcon /></a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" 
-            rel="noopener noreferrer"target="_blank"><JsIcon /></a>
-            <a href="https://reactjs.org/" 
-            rel="noopener noreferrer"target="_blank"><ReactIcon /></a>
-            <a href="https://gatsbyjs.org/" 
-            rel="noopener noreferrer" target="_blank"><GatsbyIcon /></a>
-            <a href="https://sass-lang.com/" 
-            rel="noopener noreferrer" target="_blank"><SassIcon /></a>
-            <a href="https://nodejs.org/" 
-            rel="noopener noreferrer" target="_blank"> <NodeIcon /></a>
-            <a href="https://typescriptlang.org/" 
-            rel="noopener noreferrer" target="_blank"><TypescriptIcon /></a>
-            <a href="https://www.java.com/" 
-            rel="noopener noreferrer"target="_blank"><JavaIcon /></a>
-            <a href="https://www.kotlinlang.org/" 
-            rel="noopener noreferrer"target="_blank"><KotlinIcon /></a>
-            <a href="https://www.invisionapp.com/studio"
-            rel="noopener noreferrer" target="_blank"><InvisionStudioIcon /></a>
-            <a href="https://www.figma.com/"
-            rel="noopener noreferrer" target="_blank"><FigmaIcon /></a>
-            <a href="https://www.adobe.com/sea/products/xd.html" 
-            rel="noopener noreferrer" target="_blank"><XdIcon /></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" 
+                rel="noopener noreferrer"target="_blank"><Html5Icon /></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" 
+                rel="noopener noreferrer" target="_blank"><CssIcon /></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" 
+                rel="noopener noreferrer"target="_blank"><JsIcon /></a>
+                <a href="https://reactjs.org/" 
+                rel="noopener noreferrer"target="_blank"><ReactIcon /></a>
+                <a href="https://gatsbyjs.org/" 
+                rel="noopener noreferrer" target="_blank"><GatsbyIcon /></a>
+                <a href="https://sass-lang.com/" 
+                rel="noopener noreferrer" target="_blank"><SassIcon /></a>
+                <a href="https://nodejs.org/" 
+                rel="noopener noreferrer" target="_blank"> <NodeIcon /></a>
+                <a href="https://typescriptlang.org/" 
+                rel="noopener noreferrer" target="_blank"><TypescriptIcon /></a>
+                <a href="https://www.java.com/" 
+                rel="noopener noreferrer"target="_blank"><JavaIcon /></a>
+                <a href="https://www.kotlinlang.org/" 
+                rel="noopener noreferrer"target="_blank"><KotlinIcon /></a>
+                <a href="https://www.invisionapp.com/studio"
+                rel="noopener noreferrer" target="_blank"><InvisionStudioIcon /></a>
+                <a href="https://www.figma.com/"
+                rel="noopener noreferrer" target="_blank"><FigmaIcon /></a>
+                <a href="https://www.adobe.com/sea/products/xd.html" 
+                rel="noopener noreferrer" target="_blank"><XdIcon /></a>
             </SkillContainer>
     </Container>
 )
