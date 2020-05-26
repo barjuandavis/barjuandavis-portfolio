@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import StyledImage from '../styledimage'
-import Button from '../button'
+import OuterLink from '../outerlink'
 
 
 const Container = styled.div`
@@ -53,10 +53,16 @@ const WorkContainer = styled.div`
         width: 20vh;
         height: 23vh;
     }
-    .button {
-        grid-column: 3 / 3;
-        grid-row: 4 / 4; 
-        justify-self: start;
+
+`
+
+const LinkContainer = styled.div`
+    grid-column: 3 / 3;
+    grid-row: 4 / 4; 
+    display: block;
+    text-align: left;
+    a {   
+        margin: 0 1rem 0 0;
     }
 `
 
@@ -96,34 +102,25 @@ export default () => (
             <StyledImage imageName="portfolio" />
             <WorkTitle>This site! (barjuandavis.codes)</WorkTitle>
             <WorkDescription>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Saepe illo fuga veniam ipsa quaerat voluptatibus aspernatur, 
-                unde qui eveniet, soluta facilis cumque praesentium animi, 
-                voluptate velit consectetur sed officia fugit.
+                This very site that you are visiting now is built using React, Gatsby,
+                Styled Components, and Helmet. Feel free to use it for yourself with attribution to me!
             </WorkDescription>
-            <Button className="button" iconType="github">See on Github </Button>
+            <LinkContainer>
+                <OuterLink href="https://github.com/barjuandavis/barjuandavis-portfolio" type="github">See on Github</OuterLink>
+            </LinkContainer>
         </WorkContainer>
         <WorkContainer>
-            <StyledImage imageName="placeholder" />
-            <WorkTitle>Work Title 2</WorkTitle>
+            <StyledImage imageName="wesync" />
+            <WorkTitle>Wesync: Synchronized Metronome</WorkTitle>
             <WorkDescription>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Saepe illo fuga veniam ipsa quaerat voluptatibus aspernatur, 
-                unde qui eveniet, soluta facilis cumque praesentium animi, 
-                voluptate velit consectetur sed officia fugit.
+                Wesync is a synchronized metronome application that helps musicians to time their tempo in a group
+                band session. Made using Android Native SDK, Kotlin, and Nearby Connections API. This project also featured
+                on Dev Graduation event held by Github and Dev.to. 
             </WorkDescription>
-            <Button className="button" iconType="github">See on Github </Button>
-        </WorkContainer>
-        <WorkContainer>
-            <StyledImage imageName="placeholder" />
-            <WorkTitle>Work Title 3</WorkTitle>
-            <WorkDescription>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Saepe illo fuga veniam ipsa quaerat voluptatibus aspernatur, 
-                unde qui eveniet, soluta facilis cumque praesentium animi, 
-                voluptate velit consectetur sed officia fugit.
-            </WorkDescription>
-            <Button className="button" iconType="github">See on Github </Button>
+            <LinkContainer>
+                <OuterLink href="https://github.com/barjuandavis/wesync_kotlin" type="github">See on Github</OuterLink>
+                <OuterLink href="https://dev.to/barjuandavis/synchronized-metronome-on-android-it-was-bad-491o" type="dev">See post on Dev.to</OuterLink>
+            </LinkContainer>
         </WorkContainer>
         </SubContainer>
     </Container>

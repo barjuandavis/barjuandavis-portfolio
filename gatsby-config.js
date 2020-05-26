@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    siteMetadata: {
-      title: `Barjuan Davis P. - Full Stack Developer`,
-      description: `I'm a creative thinker and executor. I make dreams come true by developing purposeful applications.`,
-      author: `@barjuandavis`,
+    title: `Barjuan Davis P.`,
+    description: `I'm a creative thinker and executor. I make dreams come true by developing purposeful applications. Highly capable using`,
+    author: `barjuandavis`,
+    image: `/images/favicon.ico`
   },
   plugins: [
     {

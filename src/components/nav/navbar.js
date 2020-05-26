@@ -1,11 +1,12 @@
 import React from "react"
 import StyledMobileLink from "./styledmobilelink"
 import StyledAnchorLink from "./styledanchorlink"
+import StyledImage from "../styledimage"
 import { Link } from 'gatsby' 
 import './navbar.scss'
 export default (props) => (
     <div className="navbar">
-        <Link className="logo" to="/"><h1>Logo</h1></Link>
+        <Link className="logo" to="/"><StyledImage imageName="header" /></Link>
         <nav className="mobile">
             <StyledMobileLink to="#about" iconType="person">About Me</StyledMobileLink>
             <StyledMobileLink to="#portfolio" iconType="book">Portfolio</StyledMobileLink>

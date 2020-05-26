@@ -39,6 +39,13 @@ export default function Image(props) {
           }
         }
       }
+      header: file(relativePath: { eq: "header.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
       portfolio: file(relativePath: { eq: "portfolio.png" }) {
         childImageSharp {
           fluid {
@@ -49,8 +56,7 @@ export default function Image(props) {
     }
   `)
 
-  let fluid = data.placeholder.childImageSharp.fluid
-
+  let fluid
   switch (props.imageName) {
       case "wesync": 
         fluid = data.wesync.childImageSharp.fluid
@@ -60,6 +66,9 @@ export default function Image(props) {
       break
       case "portfolio":
         fluid = data.portfolio.childImageSharp.fluid
+      break
+      case "header":
+        fluid = data.header.childImageSharp.fluid
       break
       default:
         fluid = data.placeholder.childImageSharp.fluid

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import StyledImg from '../styledimage'
 import SocialMediaBar from '../socialmediabar'
+import OuterLink from '../outerlink'
 //icons
 import ReactIcon from '../../images/icons/react.inline.svg'
 import CssIcon from '../../images/icons/css3.svg'
@@ -11,6 +12,7 @@ import Html5Icon from '../../images/icons/html5.svg'
 import InvisionStudioIcon from '../../images/icons/invision_studio.svg'
 import JavaIcon from '../../images/icons/java.svg'
 import JsIcon from '../../images/icons/js.svg'
+import KotlinIcon from '../../images/icons/kotlin.svg'
 import NodeIcon from '../../images/icons/node.svg'
 import SassIcon from '../../images/icons/sass.svg'
 import TypescriptIcon from '../../images/icons/typescript.svg'
@@ -78,6 +80,12 @@ const Contents = styled.p`
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
+    a {
+        svg {
+            fill: none;
+            stroke: white;
+        }
+    }
 `
 const Subcontents = styled.p`
     font-weight: 300;
@@ -110,9 +118,12 @@ const SkillContainer = styled.div`
         width: 5rem;
         height: 5rem;
         margin: 0.5rem;
+            path:not(#kotlin) {
+                fill: white;
+            }
             path {
-                fill: rgba(255, 255, 255, 0.7);
-                transition: fill 250ms ease-out;
+                fill-opacity: 0.6;
+                transition: fill-opacity 250ms ease-out;
             }
         }
     }
@@ -120,7 +131,7 @@ const SkillContainer = styled.div`
     a:hover {
         svg {
             path {
-                fill: rgba(255,255,255, 1);
+                fill-opacity: 1;
             }
         }
     }
@@ -145,7 +156,9 @@ export default () => (
             data-sal-easing="ease-in"
             data-sal-duration={duration.toString()}>I'm a creative thinker and executor. I make dreams come true by developing purposeful applications. 
             <br />Also a creative artist who makes music and graphic designs.
-            <br /><SocialMediaBar className="socialMediaBar" /></Contents>
+            <br /><SocialMediaBar className="socialMediaBar" />
+            <OuterLink href="" type="download">Download My Resume</OuterLink>
+        </Contents>
         <Subtitle data-sal="slide-up"
             data-sal-delay={(preDelay + duration*2).toString()}
             data-sal-easing="ease-in"
@@ -176,6 +189,8 @@ export default () => (
             rel="noopener noreferrer" target="_blank"><TypescriptIcon /></a>
             <a href="https://www.java.com/" 
             rel="noopener noreferrer"target="_blank"><JavaIcon /></a>
+            <a href="https://www.kotlinlang.org/" 
+            rel="noopener noreferrer"target="_blank"><KotlinIcon /></a>
             <a href="https://www.invisionapp.com/studio"
             rel="noopener noreferrer" target="_blank"><InvisionStudioIcon /></a>
             <a href="https://www.figma.com/"

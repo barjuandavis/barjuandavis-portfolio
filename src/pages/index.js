@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 
 export default () => (
     <AlternateLayout>
-       <SEO title="Barjuan Davis P. - Home" keywords={[`developer`, `application`, `full stack`]} />
+       <SEO title="Home" keywords={[`developer`, `application`, `full stack`]} />
        <section className="intro">
           <IntroSection />
        </section>

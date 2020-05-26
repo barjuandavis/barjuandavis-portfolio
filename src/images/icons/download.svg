@@ -2,9 +2,9 @@
 <g id="icon">
 <g clip-path="url(#clip0)">
 <g id="drawing 1">
-<path id="Vector" d="M115 77V101.667C115 104.938 113.712 108.075 111.42 110.388C109.128 112.701 106.019 114 102.778 114H17.2222C13.9807 114 10.8719 112.701 8.57981 110.388C6.28769 108.075 5 104.938 5 101.667V77" stroke="black" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_2" d="M29 47L60 77L91 47" stroke="black" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_3" d="M60 77V4" stroke="black" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector" d="M115 77V101.667C115 104.938 113.712 108.075 111.42 110.388C109.128 112.701 106.019 114 102.778 114H17.2222C13.9807 114 10.8719 112.701 8.57981 110.388C6.28769 108.075 5 104.938 5 101.667V77"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M29 47L60 77L91 47"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M60 77V4"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 </g>

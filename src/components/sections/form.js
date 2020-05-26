@@ -1,13 +1,6 @@
-import React, { useState } from 'react'
-import { navigate } from 'gatsby-link'
+import React from 'react'
 import styled from 'styled-components'
 import Button from '../button'
-
-function encode(data) {
-    return Object.keys(data)
-      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
-}
 
 export default function Form(props) {
     const Container = styled.div`
@@ -95,12 +88,12 @@ export default function Form(props) {
     return (
         <Container>
         <form 
-            name="Contact Form - barjuandavis.codes"
+            name="Contact Forms"
             className="container"
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true">
-                <input type="hidden" name="bot-field"  value="Contact Form - barjuandavis.codes"/>
+                <input type="hidden" name="bot-field"  value="Contact Form"/>
                 <Title>Contact<span style={{fontWeight: 300}}> me.</span></Title>
                 <input 
                     type="text" 

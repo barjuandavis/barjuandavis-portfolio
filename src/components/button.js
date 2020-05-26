@@ -43,30 +43,19 @@ const InnerButton = styled.button`
     }
 `
 
+
 export default function Button(props) {
-    if (props.iconType !== undefined) {
-        let Icon = undefined;
-        switch (props.iconType) {
-            case "github":
-                Icon = GithubIcon
-                break
-            default:
-                Icon = GithubIcon
-                break
-        }
-        return (<InnerButton
-                onClick={() => scrollTo(props.to)}
-                className={props.className} 
-                type={props.type}
-                value={props.value}>
-                    {props.children} <Icon />
-                </InnerButton>)
-    }
+    let Icon = undefined;
+    switch (props.iconType) {
+        case "github": Icon = GithubIcon; break
+        default: Icon = () => null; break
+    }  
+
     return (<InnerButton
-            onClick={() => scrollTo(props.to)}
-            className={props.className}
-            type={props.type} 
-            value={props.value}>
-                {props.children}
-            </InnerButton>)
+        onClick={() => scrollTo(props.to)}
+        className={props.className} 
+        type={props.type}
+        value={props.value}>
+            {props.children}<Icon />
+        </InnerButton>)
 }
