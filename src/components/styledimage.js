@@ -75,6 +75,7 @@ export default function Image(props) {
       break
   }
 
+
   return (
     <Container className="imgcontainer"
       data-sal={props.dataSal}

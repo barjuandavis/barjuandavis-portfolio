@@ -91,19 +91,36 @@ export default function Form(props) {
             name="Contact Form - barjuandavis"
             className="container"
             method="POST"
+            id="form"
             netlify-honeypot="bot-field"
             data-netlify="true">
-                <input type="hidden" name="bot-field"  value="Contact Form - barjuandavis"/>
+                <input type="hidden" aria-labelledby="form" name="bot-field"  value="Contact Form - barjuandavis"/>
                 <Title>Contact<span style={{fontWeight: 300}}> me.</span></Title>
                 <input 
                     type="text" 
-                    id="name" 
+                    id="name"
+                    aria-label="Name" 
                     placeholder="Your name."
                     name="name"
                     />
-                <input type="email" name="email" id="email"  placeholder="Your email."/>
-                <input type="text" name="subject" id="subject"  placeholder="Your subject, please?"/>
-                <textarea name="message" id="message" rows="5"  placeholder="And your message here."/>
+                <input 
+                    type="email" 
+                    name="email" 
+                    aria-label="Email"
+                    id="email"  
+                    placeholder="Your email."/>
+                <input 
+                    type="text" 
+                    name="subject" 
+                    id="subject"
+                    aria-label="Subject"  
+                    placeholder="Your subject, please?"/>
+                <textarea 
+                    name="message" 
+                    id="message" 
+                    aria-label="Message"
+                    rows="5"  
+                    placeholder="And your message here."/>
             <ButtonContainer>
                 <Button type="submit" className="submit">Send</Button>
                 <Button type="reset" value="Clear" className="clear">Clear</Button>

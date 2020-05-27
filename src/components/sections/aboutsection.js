@@ -182,31 +182,31 @@ export default () => (
             data-sal-easing="ease-in"
             data-sal-duration={duration.toString()}>(p.s: it is not limited to these!)</Subcontents>
         <SkillContainer className="skillContainer">
-                <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" 
+                <a aria-label="HTML5" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" 
                 rel="noopener noreferrer"target="_blank"><Html5Icon /></a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" 
+                <a aria-label="CSS" href="https://developer.mozilla.org/en-US/docs/Web/CSS" 
                 rel="noopener noreferrer" target="_blank"><CssIcon /></a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" 
+                <a aria-label="Javascript" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" 
                 rel="noopener noreferrer"target="_blank"><JsIcon /></a>
-                <a href="https://reactjs.org/" 
+                <a aria-label="React" href="https://reactjs.org/" 
                 rel="noopener noreferrer"target="_blank"><ReactIcon /></a>
-                <a href="https://gatsbyjs.org/" 
+                <a aria-label="Gatsby" href="https://gatsbyjs.org/" 
                 rel="noopener noreferrer" target="_blank"><GatsbyIcon /></a>
-                <a href="https://sass-lang.com/" 
+                <a aria-label="Sass" href="https://sass-lang.com/" 
                 rel="noopener noreferrer" target="_blank"><SassIcon /></a>
-                <a href="https://nodejs.org/" 
+                <a aria-label="Nodejs" href="https://nodejs.org/" 
                 rel="noopener noreferrer" target="_blank"> <NodeIcon /></a>
-                <a href="https://typescriptlang.org/" 
+                <a aria-label="Typescript" href="https://typescriptlang.org/" 
                 rel="noopener noreferrer" target="_blank"><TypescriptIcon /></a>
-                <a href="https://www.java.com/" 
+                <a aria-label="Java" href="https://www.java.com/" 
                 rel="noopener noreferrer"target="_blank"><JavaIcon /></a>
-                <a href="https://www.kotlinlang.org/" 
+                <a aria-label="Kotlin" href="https://www.kotlinlang.org/" 
                 rel="noopener noreferrer"target="_blank"><KotlinIcon /></a>
-                <a href="https://www.invisionapp.com/studio"
+                <a aria-label="Invision Studio" href="https://www.invisionapp.com/studio"
                 rel="noopener noreferrer" target="_blank"><InvisionStudioIcon /></a>
-                <a href="https://www.figma.com/"
+                <a aria-label="Figma" href="https://www.figma.com/"
                 rel="noopener noreferrer" target="_blank"><FigmaIcon /></a>
-                <a href="https://www.adobe.com/sea/products/xd.html" 
+                <a aria-label="Adobe XD" href="https://www.adobe.com/sea/products/xd.html" 
                 rel="noopener noreferrer" target="_blank"><XdIcon /></a>
             </SkillContainer>
     </Container>
