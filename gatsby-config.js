@@ -3,7 +3,7 @@ module.exports = {
     title: `Barjuan Davis P.`,
     description: `I'm a creative thinker and executor. I make dreams come true by developing purposeful applications. Highly capable using`,
     author: `barjuandavis`,
-    image: `/images/favicon.ico`
+    image: `/favicon.ico`
   },
   plugins: [
     {
