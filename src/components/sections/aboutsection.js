@@ -172,7 +172,9 @@ export default () => (
         <SocialMediaBar 
             className="socialMediaBar"></SocialMediaBar>
         <OuterLink 
-            className="link" href="" type="download">Download My Resume</OuterLink>
+            className="link" 
+            href="https://drive.google.com/file/d/1sk0ieBbcZA8KYrbpNU0I_vc9nN__pTOY/view?usp=sharing" 
+            type="download">Download My Resume</OuterLink>
         <Subtitle data-sal="slide-up"
             data-sal-delay={(preDelay + duration*2).toString()}
             data-sal-easing="ease-in"
