@@ -37,15 +37,16 @@
 @media (max-width: $_breakpoint) {
   .navbar {
     grid-template-columns: [navbar] auto;
-    height: 10%;
+    grid-template-rows: auto;
+    height: 56px;
+    margin: 0;
     background-color: rgba(45, 45, 45, 1);
     box-shadow: 0.5rem -0.5rem 1rem rgba(0,0,0,0.07);
     width: 100vw;
     top: auto;
     bottom: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     .mobile {
+      height: 100%;
       display: flex;
     }
     .desktop {

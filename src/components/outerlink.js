@@ -23,6 +23,7 @@ export default function OuterLink(props){
         svg {
             padding-top: 0.1rem;
             fill: white;
+            stroke: white;
             opacity: 0.7;
             width: 1.2rem;
             height: 1.2rem;
@@ -31,6 +32,7 @@ export default function OuterLink(props){
         &:hover {
             opacity: 1;
             svg {
+                stroke: black;
                 opacity: 1;
             }
         }

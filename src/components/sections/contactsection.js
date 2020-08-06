@@ -45,7 +45,7 @@ const LeftColumnContainer = styled.div`
 
 const Title = styled.div`
     font-size: 3.2rem;
-    font-weight: 300;
+    font-weight: 200;
     grid-row: 2 / 2;
     grid-column: 2 / span 4;
     @media (max-width: 600px) {
@@ -58,7 +58,7 @@ export default () => (
         <LeftColumnContainer>
             <Title>Got things to say?</Title>
             <Title style={{
-                fontWeight: 600,
+                fontWeight: 400,
                 gridRowStart: 3,
                 gridRowEnd: 3
             }}>Reach me out!</Title>

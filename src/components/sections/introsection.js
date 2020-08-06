@@ -11,7 +11,7 @@ const Container = styled.div`
     padding-top: 5em;
     height: 100vh;
     display: grid;
-    grid-template-rows: 0.8fr [title] auto [subtitle] auto [buttons] auto 1fr;
+    grid-template-rows: 0.8fr auto auto 0.1fr auto 1fr;
     grid-row-gap: 1em;
     grid-template-columns: 0.5fr 4fr 0.5fr;
     justify-items: start;
@@ -20,25 +20,29 @@ const Container = styled.div`
 const Title = styled.h1`
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 4.2rem;
-    font-weight: 600;
+    font-size: 4rem;
+    font-weight: 300;
     color: white;
-    grid-area: title;
+    grid-row: 3;
     grid-column: 2;
+    span {
+        font-weight: 600;
+    }
+
 `
 
 const Subtitle = styled.h3`
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 2.8rem;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 200;
     color: white;
-    grid-area: subtitle;
+    grid-row: 2;
     grid-column: 2;
 `
 
 const StyledButtonWrapper = styled.div`
-    grid-area: buttons;
+    grid-row: 5;
     display: flex;
     justify-content: space-between;
     grid-column: 2;
@@ -58,21 +62,21 @@ const StyledButtonWrapper = styled.div`
 const duration = 250;
 const preDelay = 300;
 
-export default (props) => (
+export default () => (
     <Container>
         <Title 
-            data-sal="slide-up"
-            data-sal-delay={preDelay.toString()}
-            data-sal-easing="ease-in"
-            data-sal-duration={duration.toString()}>
-            Barjuan Davis P.
-        </Title>
-        <Subtitle
             data-sal="slide-up"
             data-sal-delay={(preDelay + duration).toString()}
             data-sal-easing="ease-in"
             data-sal-duration={duration.toString()}>
-            Full Stack Developer.
+            Create your own <span>impactful websites and apps</span> with me.
+        </Title>
+        <Subtitle
+            data-sal="slide-up"
+            data-sal-delay={(preDelay).toString()}
+            data-sal-easing="ease-in"
+            data-sal-duration={duration.toString()}>
+            Hello! I'm Davis, a Full Stack Developer.
         </Subtitle>
         <StyledButtonWrapper
             data-sal="fade"

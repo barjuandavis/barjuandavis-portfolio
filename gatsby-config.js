@@ -16,10 +16,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
-        custom: {
-          families: ["Jost"],
-          urls: ["./fonts/fonts.css"],
-        },
+        google: {
+          families: ["Jost:200, 300, 400, 600, 700, 800"]
+        }
       },
     },
     'gatsby-transformer-sharp',

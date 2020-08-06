@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import StyledImg from '../styledimage'
 import SocialMediaBar from '../socialmediabar'
-import OuterLink from '../outerlink'
+import Button from '../button'
 //icons
 import ReactIcon from '../../images/icons/react.inline.svg'
 import CssIcon from '../../images/icons/css3.svg'
@@ -17,6 +17,9 @@ import NodeIcon from '../../images/icons/node.svg'
 import SassIcon from '../../images/icons/sass.svg'
 import TypescriptIcon from '../../images/icons/typescript.svg'
 import XdIcon from '../../images/icons/xd.svg'
+import GoLangIcon from '../../images/icons/golang.svg'
+import GraphqlIcon from '../../images/icons/graphql.svg'
+
 
 
 const Container = styled.div`
@@ -48,18 +51,13 @@ const Container = styled.div`
     .link {
         grid-column: 3 / 3;
         grid-row: 5 / 5;
-        svg {
-            fill: none;
-            stroke: white;
-        }
+        padding: 0 1rem;
     }
-
-    
 `
 
 const Title = styled.h1`
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: normal;
     grid-row-start: 2;
     grid-column-start: 3;
     align-self: end;
@@ -68,9 +66,6 @@ const Title = styled.h1`
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
-`
-const TitleMod = styled.span`
-    font-weight: normal;
 `
 const Contents = styled.p`
     font-size: 1.2rem;
@@ -99,6 +94,9 @@ const Subtitle= styled.h1`
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
+    span {
+        font-weight: 600;
+    }
 
 `
 const Subcontents = styled.p`
@@ -129,22 +127,20 @@ const SkillContainer = styled.div`
             width: 5rem;
             height: 5rem;
             margin: 0.5rem;
-                path:not(#kotlin) {
-                    fill: white;
-                }
                 path {
-                    fill-opacity: 0.6;
-                    transition: fill-opacity 250ms ease-out;
+                    fill: #cccccc;
+                    transition: fill 250ms ease-out;
                 }
             }
         }
         a:hover {
             svg {
                 path {
-                    fill-opacity: 1;
+                    fill: white;
                 }
             }
         }
+
         @media (max-width: 600px) {
             padding: 0 4rem;
         }
@@ -162,7 +158,7 @@ export default () => (
         <Title data-sal="slide-up"
             data-sal-delay={preDelay.toString()}
             data-sal-easing="ease-in"
-            data-sal-duration={duration.toString()}>Hello! <TitleMod>Call me</TitleMod> Davis.</Title>
+            data-sal-duration={duration.toString()}>Hello! Call me Davis.</Title>
         <Contents data-sal="slide-up"
             data-sal-delay={(preDelay + duration).toString()}
             data-sal-easing="ease-in"
@@ -171,14 +167,14 @@ export default () => (
         </Contents>
         <SocialMediaBar 
             className="socialMediaBar"></SocialMediaBar>
-        <OuterLink 
-            className="link" 
-            href="https://drive.google.com/file/d/1sk0ieBbcZA8KYrbpNU0I_vc9nN__pTOY/view?usp=sharing" 
-            type="download">Download My Resume</OuterLink>
+        <Button className="link" onClick={() => {window.open("https://drive.google.com/file/d/1sk0ieBbcZA8KYrbpNU0I_vc9nN__pTOY/view?usp=sharing", "_blank")}}
+        ariaLabel="Download My Resume"
+        iconType="download"
+        >Download My Resume </Button>
         <Subtitle data-sal="slide-up"
             data-sal-delay={(preDelay + duration*2).toString()}
             data-sal-easing="ease-in"
-            data-sal-duration={duration.toString()}>Here is <TitleMod>my skillset.</TitleMod></Subtitle>
+            data-sal-duration={duration.toString()}>Here is <span>my skillset.</span></Subtitle>
         <Subcontents data-sal="slide-up"
             data-sal-delay={(preDelay + duration*2).toString()}
             data-sal-easing="ease-in"
@@ -202,6 +198,10 @@ export default () => (
                 rel="noopener noreferrer" target="_blank"><TypescriptIcon /></a>
                 <a aria-label="Java" href="https://www.java.com/" 
                 rel="noopener noreferrer"target="_blank"><JavaIcon /></a>
+                <a aria-label="Golang" href="https://golang.org/" 
+                rel="noopener noreferrer"target="_blank"><GoLangIcon /></a>
+                <a aria-label="GraphQL" href="https://graphql.org/" 
+                rel="noopener noreferrer"target="_blank"><GraphqlIcon /></a>
                 <a aria-label="Kotlin" href="https://www.kotlinlang.org/" 
                 rel="noopener noreferrer"target="_blank"><KotlinIcon /></a>
                 <a aria-label="Invision Studio" href="https://www.invisionapp.com/studio"

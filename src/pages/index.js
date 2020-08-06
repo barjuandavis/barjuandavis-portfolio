@@ -1,5 +1,5 @@
 import React from "react"
-import AlternateLayout from "../components/alternatelayout"
+import Layout from "../components/layout"
 import IntroSection from "../components/sections/introsection"
 import AboutSection from "../components/sections/aboutsection"
 import PortfolioSection from "../components/sections/portfoliosection"
@@ -7,8 +7,14 @@ import ContactSection from "../components/sections/contactsection"
 import SEO from '../components/seo'
 
 export default () => (
-    <AlternateLayout>
-       <SEO title="Home" keywords={[`developer`, `application`, `full stack`]} />
+    <Layout>
+       <SEO title="Home" keywords={[
+          `developer`, 
+          `application`,
+          `full stack`,
+          `barjuan davis`,
+          `barjuandavis`,
+          `mobile`]} />
        <section className="intro">
           <IntroSection />
        </section>
@@ -21,5 +27,5 @@ export default () => (
        <section className="contact" id="contact">
          <ContactSection />
        </section>
-    </AlternateLayout>
+    </Layout>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import GithubIcon from '../images/icons/github.svg'
+import DownloadIcon from '../images/icons/download.svg'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
 
@@ -25,8 +26,8 @@ const InnerButton = styled.button`
         height: 1em;
         width: 1em;
         path {
-            fill: rgba(255, 255, 255, 1);
-            transition: fill 150ms ease-in;
+            stroke: #ffffff;
+            transition: stroke 150ms ease-in;
         }
     }
 
@@ -34,8 +35,9 @@ const InnerButton = styled.button`
         background: #ffffff;
         color: #808080;
         path {
-            fill: #808080;
+            stroke: #808080;
         }
+        cursor: pointer;
     }
 
     &:focus, &:active {
@@ -48,14 +50,17 @@ export default function Button(props) {
     let Icon = undefined;
     switch (props.iconType) {
         case "github": Icon = GithubIcon; break
+        case "download": Icon = DownloadIcon; break
         default: Icon = () => null; break
     }  
 
     return (<InnerButton
-        onClick={() => scrollTo(props.to)}
-        className={props.className} 
+        onClick={props.onClick !== undefined ? props.onClick : () => scrollTo(props.to)}
+        className={props.className}
+        style={props.style} 
         type={props.type}
+        aria-label={props.ariaLabel}
         value={props.value}>
-            {props.children}<Icon />
+            {props.children}{(props.iconType !== undefined) && <Icon />}
         </InnerButton>)
 }

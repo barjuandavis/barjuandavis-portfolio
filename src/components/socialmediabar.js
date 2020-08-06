@@ -10,9 +10,7 @@ export default function SocialMediaBar(props) {
         display:flex;
         flex-direction: row;
         -ms-flex-direction: column;
-        font-size: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: -0.5rem;
         a {
             padding: 0 1rem 0 0;
             color: rgba(255, 255, 255, 0.7);

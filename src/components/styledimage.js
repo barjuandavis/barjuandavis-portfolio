@@ -53,6 +53,13 @@ export default function Image(props) {
           }
         }
       }
+      honk: file(relativePath: { eq: "honk.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
     }
   `)
 
@@ -70,6 +77,9 @@ export default function Image(props) {
       case "header":
         fluid = data.header.childImageSharp.fluid
       break
+      case "honk":
+        fluid = data.honk.childImageSharp.fluid
+      break
       default:
         fluid = data.placeholder.childImageSharp.fluid
       break
@@ -77,7 +87,7 @@ export default function Image(props) {
 
 
   return (
-    <Container className="imgcontainer"
+    <Container className={"imgcontainer "+props.className}
       data-sal={props.dataSal}
       data-sal-delay={props.dataSalDelay}
       data-sal-easing={props.dataSalEasing}

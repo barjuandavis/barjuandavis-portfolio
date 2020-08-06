@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import StyledImage from '../styledimage'
-import OuterLink from '../outerlink'
+import Button from '../button'
 
 
 const Container = styled.div`
@@ -15,6 +15,10 @@ const Container = styled.div`
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#222222",endColorstr="#000141",GradientType=1);
     padding-top: 5em; 
     width: 100%;
+
+    .visit {
+
+    }
 `
 const Title = styled.h1`
     font-size: 2.5rem;
@@ -41,27 +45,26 @@ const SubContainer = styled.div`
 `
 const WorkContainer = styled.div`
     display: grid;
-    grid-template-columns: 1fr auto auto 1fr;
+    width: 100%;
+    grid-template-columns: auto auto;
     grid-template-rows: 1fr auto auto auto 1fr;
     gap: 1rem;
     justify-content: start;
     align-content: start;
     .imgcontainer {
-        grid-column: 2 / 2;
+        grid-column: 1 / 1;
         grid-row: 2 / span 3;
         justify-self: center;
         width: 20vh;
         height: 23vh;
     }
-
 `
-
 const LinkContainer = styled.div`
     grid-column: 3 / 3;
     grid-row: 4 / 4; 
     display: block;
     text-align: left;
-    a {   
+    button {   
         margin: 0 1rem 0 0;
     }
 `
@@ -98,30 +101,80 @@ export default () => (
             data-sal-easing="ease-in"
             data-sal-duration={duration.toString()}>Here are some of <span>my works.</span></Title>
         <SubContainer>
-        <WorkContainer>
-            <StyledImage imageName="portfolio" />
-            <WorkTitle>This site! (barjuandavis.codes)</WorkTitle>
-            <WorkDescription>
-                This very site that you are visiting now is built using React, Gatsby,
-                Styled Components, and Helmet. Feel free to use it for yourself with attribution to me!
-            </WorkDescription>
-            <LinkContainer>
-                <OuterLink href="https://github.com/barjuandavis/barjuandavis-portfolio" type="github">See on Github</OuterLink>
-            </LinkContainer>
-        </WorkContainer>
-        <WorkContainer>
-            <StyledImage imageName="wesync" />
-            <WorkTitle>Wesync: Synchronized Metronome</WorkTitle>
-            <WorkDescription>
-                Wesync is a synchronized metronome application that helps musicians to time their tempo in a group
-                band session. Made using Android Native SDK, Kotlin, and Nearby Connections API. This project also featured
-                on Dev Graduation event held by Github and Dev.to. 
-            </WorkDescription>
-            <LinkContainer>
-                <OuterLink href="https://github.com/barjuandavis/wesync_kotlin" type="github">See on Github</OuterLink>
-                <OuterLink href="https://dev.to/barjuandavis/synchronized-metronome-on-android-it-was-bad-491o" type="dev">See post on Dev.to</OuterLink>
-            </LinkContainer>
-        </WorkContainer>
+            <WorkContainer>
+                <StyledImage imageName="portfolio" />
+                <WorkTitle>This site! (barjuandavis.codes)</WorkTitle>
+                <WorkDescription>
+                    This very site that you are visiting now is built using React, Gatsby,
+                    Styled Components, and Helmet. Feel free to use it for yourself with attribution to me!
+                </WorkDescription>
+                <LinkContainer>
+                    <Button 
+                        className="github"
+                        onClick={() => {window.open("https://github.com/barjuandavis/barjuandavis-portfolio", "_blank")}} 
+                        ariaLabel="See on Github" 
+                        iconType="github">See on Github </Button>
+                </LinkContainer>
+            </WorkContainer>
+
+            <WorkContainer>
+                <StyledImage imageName="wesync" />
+                <WorkTitle>Wesync: Synchronized Metronome</WorkTitle>
+                <WorkDescription>
+                    Wesync is a synchronized metronome application that helps musicians to time their tempo in a group
+                    band session. Made using Android Native SDK, Kotlin, and Nearby Connections API.
+                </WorkDescription>
+                <LinkContainer>
+                    <Button 
+                        className="github"
+                        onClick={() => {window.open("https://github.com/barjuandavis/wesync_kotlin", "_blank")}} 
+                        ariaLabel="See on Github" 
+                        iconType="github">See on Github </Button>
+                </LinkContainer>
+            </WorkContainer>
+
+            <WorkContainer>
+                <StyledImage imageName="placeholder" />
+                <WorkTitle>Simple REST API</WorkTitle>
+                <WorkDescription>
+                    A simple REST API example that does CRUD operations that implemented in a shop environment. Made using Node.js and Express.
+                </WorkDescription>
+                <LinkContainer>
+                    <Button 
+                        className="github"
+                        onClick={() => {window.open("https://github.com/barjuandavis/simpleRESTAPI", "_blank")}} 
+                        ariaLabel="See on Github" 
+                        iconType="github">See on Github </Button>
+                </LinkContainer>
+            </WorkContainer>
+
+            <WorkContainer>
+                <StyledImage imageName="honk" />
+                <WorkTitle>The Honk Generator </WorkTitle>
+                <WorkDescription>
+                    A little side project that entirely made in React that converts plain texts into honks.
+                    You can try this app by yourself by clicking the "Try the App" button below!
+                </WorkDescription>
+                <LinkContainer>
+                    <Button 
+                        className="github"
+                        onClick={() => {window.open("https://github.com/barjuandavis/honk-generator", "_blank")}} 
+                        ariaLabel="See on Github" 
+                        iconType="github">See on Github </Button>
+                    <Button 
+                        className="visit"
+                        onClick={() => {window.open("https://barjuandavis.github.io/honk-generator", "_blank")}} 
+                        ariaLabel="Try the App" 
+                        >Try the App</Button>
+                </LinkContainer>
+            </WorkContainer>
+
+            <Button 
+                className="github--big"
+                onClick={() => {window.open("https://github.com/barjuandavis", "_blank")}} 
+                ariaLabel="See on Github" 
+                iconType="github">More of my projects on Github </Button>
+
         </SubContainer>
     </Container>
 )
