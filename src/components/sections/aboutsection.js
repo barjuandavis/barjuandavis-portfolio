@@ -167,7 +167,7 @@ export default () => (
         </Contents>
         <SocialMediaBar 
             className="socialMediaBar"></SocialMediaBar>
-        <Button className="link" onClick={() => {window.open("https://drive.google.com/file/d/1sk0ieBbcZA8KYrbpNU0I_vc9nN__pTOY/view?usp=sharing", "_blank")}}
+        <Button className="link" onClick={() => {window.open("https://drive.google.com/file/d/11R1m_3bAdVVXVQV1Y4RBjmeXHM68OllQ/view?usp=sharing", "_blank")}}
         ariaLabel="Download My Resume"
         iconType="download"
         >Download My Resume </Button>
