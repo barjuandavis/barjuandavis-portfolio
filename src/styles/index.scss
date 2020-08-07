@@ -23,7 +23,7 @@ $current-font-size: 16px;
 @each $mod, $bp in $_map-grid-props {
     @include _create-mq($bp) {
         @if ($mod != 'xl') {
-            $current-font-size: $current-font-size * (92 / 100);
+            $current-font-size: $current-font-size * (90 / 100);
         }
         html {
             font-size: $current-font-size;
