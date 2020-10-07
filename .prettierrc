@@ -1,7 +1,12 @@
 {
-  "endOfLine": "lf",
-  "semi": false,
-  "singleQuote": false,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": true,
+  "printWidth": 80,
+  "singleQuote": true,
+  "trailingComma": "none",
   "tabWidth": 2,
-  "trailingComma": "es5"
+  "useTabs": false,
+  "react/jsx-max-props-per-line": [1, { "when": "always" }],
+  "endOfLine": "lf",
+  "semi": false
 }
