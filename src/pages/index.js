@@ -3,8 +3,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import Intro from '../components/sections/Intro'
-import transitions from '@material-ui/core/styles/transitions'
+import IntroSection from '../components/sections/IntroSection'
 
 export const globalContext = createContext()
 
@@ -17,9 +16,16 @@ export default () => {
         color: darkMode ? '#fafafa' : '#000',
         transition: 'color 200ms ease-in-out'
       },
-      h1: {
-        fontWeight: 700
-      }
+      h1: { fontWeight: 700 },
+      h2: { fontWeight: 500 },
+      h3: { fontWeight: 300 },
+      h4: { fontWeight: 700 },
+      h5: { fontWeight: 500 },
+      h6: { fontWeight: 300 },
+      subtitle1: { fontWeight: 400 },
+      subtitle2: { fontWeight: 300 },
+      body1: { fontWeight: 500 },
+      body2: { fontWeight: 300 }
     },
     palette: {
       primary: {
@@ -63,7 +69,8 @@ export default () => {
           textTransform: 'none',
           borderRadius: 24,
           padding: '8px 16px',
-          transition: 'color 200ms ease-in-out, border-color 200ms ease-in-out'
+          transition:
+            'color 200ms ease-in-out, border-color 200ms ease-in-out, background-color 200ms ease-in-out'
         },
         outlinedPrimary: {
           color: darkMode ? '#DED3FF' : '#5f2eea',
@@ -77,7 +84,7 @@ export default () => {
           letterSpacing: '3.2px'
         },
         colorPrimary: {
-          backgroundColor: darkMode ? '#121212' : '#fafafa',
+          backgroundColor: 'transparent',
           color: '#000'
         }
       }
@@ -101,7 +108,7 @@ export default () => {
           ]}
         />
         <Layout>
-          <Intro />
+          <IntroSection />
         </Layout>
       </ThemeProvider>
     </Provider>

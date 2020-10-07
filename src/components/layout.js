@@ -9,24 +9,24 @@ import Typography from '@material-ui/core/Typography'
 
 import { globalContext } from '../pages/index'
 
-const useStyles = makeStyles(() => ({
-  toolbar: {
-    display: 'flex',
-    justifyContent: 'space-between'
-  }
-}))
-
 export default props => {
+  const useStyles = makeStyles(() => ({
+    root: {
+      backgroundColor: theme.palette.background.default,
+      transition: 'background-color 200ms ease-in-out',
+      height: '100vh'
+    },
+    toolbar: {
+      display: 'flex',
+      justifyContent: 'space-between'
+    }
+  }))
   const theme = useTheme()
   const { setDarkMode, darkMode } = useContext(globalContext)
   const classes = useStyles()
   return (
-    <Box
-      style={{
-        backgroundColor: theme.palette.background.default,
-        minHeight: '100vh'
-      }}>
-      <AppBar position="absolute">
+    <Box className={classes.root}>
+      <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
           <Typography variant="h6">Some Text</Typography>
           <Button
@@ -42,10 +42,8 @@ export default props => {
       <Box
         display="flex"
         justifyContent="center"
-        m={5}
         style={{
-          marginTop: theme.mixins.toolbar.minHeight,
-          minHeight: '100%'
+          height: `inherit`
         }}
         flexDirection="column"
         alignItems="center">
