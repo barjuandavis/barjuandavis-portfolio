@@ -28,6 +28,7 @@
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.3.33",
+    "gatsby-theme-material-ui": "^1.0.13",
     "gatsby-transformer-sharp": "^2.5.17",
     "http-proxy": "^1.18.1",
     "node-sass": "^4.14.1",

@@ -14,12 +14,13 @@ const theme = createMuiTheme({
       fontWeight: 700
     }
   },
-  pallete: {
+  palette: {
+    type: 'dark',
     primary: {
-      main: '#5f2eea'
-      // dark: '#2A00A2',
-      // light: '#DED3FF',
-      // contrastText: '#fff'
+      main: '#5f2eea',
+      dark: '#2A00A2',
+      light: '#DED3FF',
+      contrastText: '#fff'
     },
     secondary: {
       main: '#1CC8EE',
@@ -52,7 +53,7 @@ const theme = createMuiTheme({
       root: {
         textTransform: 'none',
         borderRadius: 24,
-        padding: '0 16px'
+        padding: '8px 16px'
       }
     },
     MuiAppBar: {
@@ -66,21 +67,21 @@ export default () => {
   const [currentTheme, setCurrentTheme] = useState(theme)
 
   return (
-    <Layout>
+    <ThemeProvider theme={currentTheme}>
       <SEO
         title="Home"
         keywords={[
           `developer`,
           `application`,
           `full stack`,
-          `barjuan davis`,
           `barjuandavis`,
+          `barjuan davis`,
           `mobile`
         ]}
       />
-      <ThemeProvider theme={currentTheme}>
+      <Layout>
         <Intro />
-      </ThemeProvider>
-    </Layout>
+      </Layout>
+    </ThemeProvider>
   )
 }

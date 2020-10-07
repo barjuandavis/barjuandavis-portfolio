@@ -26,6 +26,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
     'gatsby-plugin-smoothscroll',
+    'gatsby-theme-material-ui',
     {
       resolve: `gatsby-plugin-anchor-links`,
       options: {
