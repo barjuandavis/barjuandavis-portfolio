@@ -12,18 +12,18 @@ const Intro = () => {
         justifyContent: 'center',
         flexDirection: 'column'
       }}>
-      <Typography variant="h6">Hello, I'm Davis.</Typography>
+      <Typography variant="h6">Hey, see something different on barjuandavis.codes?</Typography>
       <Typography variant="h2" component="h1">
-        Create your own, amazing websites with me.
+        Something good is coming soon!
       </Typography>
-      <Box mt={3}>
+      {/* <Box mt={3}>
         <Button variant="contained" color="primary">
           Contact Me
         </Button>
         <Button variant="outlined" color="primary" style={{ marginLeft: 16 }}>
           Learn More
         </Button>
-      </Box>
+      </Box> */}
     </section>
   )
 }
