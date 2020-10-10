@@ -1,6 +1,6 @@
 import React, { useState, createContext } from 'react'
-import Layout from '../components/WipLayout'
-import SEO from '../components/SEO'
+import Layout from '../components/wip-layout'
+import SEO from '../components/seo'
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
