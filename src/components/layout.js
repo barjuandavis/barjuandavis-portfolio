@@ -14,11 +14,24 @@ export default props => {
     root: {
       backgroundColor: theme.palette.background.default,
       transition: 'background-color 200ms ease-in-out',
-      height: '100vh'
+      height: '100vh',
     },
     toolbar: {
       display: 'flex',
       justifyContent: 'space-between'
+    },
+    content: {
+      display: "flex",
+      justifyContent:"center",
+      height: `inherit`,
+      flexDirection:"column",
+      alignItems:"center",
+      [theme.breakpoints.down('lg')]: {
+        margin: '0 24px'
+      },
+      [theme.breakpoints.down('xs')]: {
+        margin: '0 16px'
+      }
     }
   }))
   const theme = useTheme()
@@ -28,7 +41,7 @@ export default props => {
     <Box className={classes.root}>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
-          <Typography variant="h6">Some Text</Typography>
+          <Typography variant="h6">barjuandavis.codes</Typography>
           <Button
             variant="outlined"
             color="primary"
@@ -39,14 +52,7 @@ export default props => {
           </Button>
         </Toolbar>
       </AppBar>
-      <Box
-        display="flex"
-        justifyContent="center"
-        style={{
-          height: `inherit`
-        }}
-        flexDirection="column"
-        alignItems="center">
+      <Box className={classes.content}>
         {props.children}
       </Box>
     </Box>
