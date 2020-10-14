@@ -13,12 +13,33 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
+    // {
+    //   resolve: 'gatsby-plugin-web-font-loader',
+    //   options: {
+    //     google: {
+    //       families: ['Poppins:100,200,300,400,500,600,700,800,900']
+    //     }
+    //   }
+    // },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        google: {
-          families: ['Poppins:100,200,300,400,500,600,700,800,900']
-        }
+        fonts: [
+          {
+            family: `Poppins`,
+            variants: [
+              `100`,
+              `200`,
+              `300`,
+              `400`,
+              `500`,
+              `600`,
+              `700`,
+              `800`,
+              `900`
+            ]
+          }
+        ]
       }
     },
     'gatsby-transformer-sharp',
